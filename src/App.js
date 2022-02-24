@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
+import Clima from './components/Clima';
+
 
 function App() {
   // state del formulario
@@ -11,6 +13,8 @@ function App() {
   });
 
   const [consultar, setConsultar] = useState(false)
+  // 
+  const [resultado, setResultado] = useState({})
 
   const { ciudad, pais } = busqueda;
 
@@ -22,8 +26,11 @@ function App() {
 
         const respuesta = await fetch(url);
         const resultado = await respuesta.json();
+        setResultado(resultado)
+        // para que me reinicie los datos una vez haga la consulta
+        setConsultar(false)
 
-        console.log(resultado)
+         //console.log(resultado) // para poder mirar en consola si me esta trallendo los datos
       }
     }
     consultarAPI();
@@ -34,9 +41,14 @@ function App() {
     <>
       <Header />
       <main>
+        <section>
         <Formulario busqueda={busqueda}
           setBusqueda={setBusqueda}
           setConsultar={setConsultar} />
+
+        <Clima 
+        resultado={resultado}/>
+        </section>
       </main>
     </>
   );
