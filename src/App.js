@@ -13,8 +13,9 @@ function App() {
   });
 
   const [consultar, setConsultar] = useState(false)
-  // 
   const [resultado, setResultado] = useState({})
+  // para cuando no encuentre el clima de la ciudad
+  const [error, setError] = useState(false);
 
   const { ciudad, pais } = busqueda;
 
@@ -30,24 +31,41 @@ function App() {
         // para que me reinicie los datos una vez haga la consulta
         setConsultar(false)
 
-         //console.log(resultado) // para poder mirar en consola si me esta trallendo los datos
+        //console.log(resultado) // para poder mirar en consola si me esta trallendo los datos
+
+        //detecta el tipo de resultado en la consulta
+        if (resultado.cod === "404") {
+          setError(true)
+        } else {
+          setError(false)
+        }
       }
     }
     consultarAPI();
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [consultar])
 
+  // carga condicional de componentes
+  let componente;
+  if (error) {
+    componente = <p>No hay resultados</p>
+  } else {
+    componente = <Clima resultado={resultado} />
+  }
 
   return (
     <>
       <Header />
       <main>
         <section>
-        <Formulario busqueda={busqueda}
-          setBusqueda={setBusqueda}
-          setConsultar={setConsultar} />
+          <Formulario busqueda={busqueda}
+            setBusqueda={setBusqueda}
+            setConsultar={setConsultar} />
 
-        <Clima 
-        resultado={resultado}/>
+            <div>
+              {componente}
+            </div>
         </section>
       </main>
     </>
