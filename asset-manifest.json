@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/consultaClima/static/css/main.7a185c3b.css",
+    "main.js": "/consultaClima/static/js/main.82a0c479.js",
+    "index.html": "/consultaClima/index.html",
+    "main.7a185c3b.css.map": "/consultaClima/static/css/main.7a185c3b.css.map",
+    "main.82a0c479.js.map": "/consultaClima/static/js/main.82a0c479.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a185c3b.css",
+    "static/js/main.82a0c479.js"
+  ]
+}
