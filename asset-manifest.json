@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/consultaClima/static/css/main.7a185c3b.css",
-    "main.js": "/consultaClima/static/js/main.02db98c9.js",
+    "main.css": "/consultaClima/static/css/main.a247bed4.css",
+    "main.js": "/consultaClima/static/js/main.81758941.js",
     "index.html": "/consultaClima/index.html",
-    "main.7a185c3b.css.map": "/consultaClima/static/css/main.7a185c3b.css.map",
-    "main.02db98c9.js.map": "/consultaClima/static/js/main.02db98c9.js.map"
+    "main.a247bed4.css.map": "/consultaClima/static/css/main.a247bed4.css.map",
+    "main.81758941.js.map": "/consultaClima/static/js/main.81758941.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a185c3b.css",
-    "static/js/main.02db98c9.js"
+    "static/css/main.a247bed4.css",
+    "static/js/main.81758941.js"
   ]
 }
