@@ -47,7 +47,7 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
                     value={ciudad}
                     onChange={handleChange} 
                     required 
-                    className=''/>
+                    className='form--input'/>
 
                 <label htmlFor="pais">País</label>
                 <select name="pais" id='pais' value={pais} onChange={handleChange} className='form--select'>
@@ -66,7 +66,7 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
 
                 <div className='form--buton'>
                     <input type='submit'
-                        value="buscar clima"
+                        value="Buscar clima"
                     />
                 </div>
             </form>
