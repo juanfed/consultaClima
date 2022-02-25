@@ -1,0 +1,31 @@
+.formulario{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form label{
+    font-size: 1.2rem;
+}
+
+.form--input{
+    margin-bottom: 1rem;
+    width: 13rem;
+}
+
+.form--select{
+    height: 1.4rem;
+}
+
+.form--buton{
+    margin: 1rem 0rem;
+}
+
+.form--buton input{
+    height: 27px;
+    width: 7rem;
+    font-size: 1rem;
+}

@@ -1,0 +1,24 @@
+.resultado{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.resultado--title{
+    color: red;
+}
+
+.resultado--max{
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.resultado--min{
+    text-decoration: underline;
+    text-decoration-color: rgb(4, 0, 238);
+}
+
+.resultado--promedio{
+    text-decoration: underline;
+    text-decoration-color: rgb(1, 255, 1);
+}
+

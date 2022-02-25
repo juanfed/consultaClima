@@ -42,31 +42,29 @@ function App() {
       }
     }
     consultarAPI();
-    
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [consultar])
 
   // carga condicional de componentes
   let componente;
   if (error) {
-    componente = <p>No hay resultados</p>
+    componente = <p className='sin-resultado'>No hay resultados</p>
   } else {
-    componente = <Clima resultado={resultado} />
+    componente = <Clima resultado={resultado}/>
   }
 
   return (
     <>
       <Header />
-      <main>
-        <section>
-          <Formulario busqueda={busqueda}
-            setBusqueda={setBusqueda}
-            setConsultar={setConsultar} />
+      <main className='main'>
+        <Formulario busqueda={busqueda}
+          setBusqueda={setBusqueda}
+          setConsultar={setConsultar} />
 
-            <div>
-              {componente}
-            </div>
-        </section>
+        <div>
+          {componente}
+        </div>
       </main>
     </>
   );

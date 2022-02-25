@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../styles/formulario.css';
 
 const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
 
@@ -35,9 +36,8 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
     }
 
     return (
-        <div>
-            <h3>Formulario</h3>
-            <form action="" onSubmit={handleSubmit}>
+        <div className='formulario'>
+            <form action="" onSubmit={handleSubmit} className='form'>
                 {error ? (alert("Datos invalidos")) : null}
                 <label htmlFor="ciudad">Ciudad: </label>
                 <input type="text"
@@ -46,10 +46,11 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
                     placeholder='Ciudad'
                     value={ciudad}
                     onChange={handleChange} 
-                    required />
+                    required 
+                    className=''/>
 
                 <label htmlFor="pais">País</label>
-                <select name="pais" id='pais' value={pais} onChange={handleChange}>
+                <select name="pais" id='pais' value={pais} onChange={handleChange} className='form--select'>
                     <option> --Selecciona un país-- </option>
                     <option value="US">Estados Unidos</option>
                     <option value="MX">Mexico</option>
@@ -63,10 +64,7 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
                     <option value="JP">Japon</option>
                 </select>
 
-                <br />
-                <br />
-
-                <div>
+                <div className='form--buton'>
                     <input type='submit'
                         value="buscar clima"
                     />
